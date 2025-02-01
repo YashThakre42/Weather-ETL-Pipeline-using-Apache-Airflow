@@ -2,17 +2,18 @@
 How to Set Up & Run
 
 1️⃣ Clone the Repository
-
 sh
 Copy
 Edit
 git clone https://github.com/yourusername/weather-etl-pipeline.git
 cd weather-etl-pipeline
+
 2️⃣ Install Dependencies
 sh
 Copy
 Edit
 pip install -r requirements.txt
+
 3️⃣ Set Up Airflow
 sh
 Copy
@@ -21,6 +22,7 @@ export AIRFLOW_HOME=~/airflow
 airflow db init
 airflow webserver --port 8080
 airflow scheduler
+
 4️⃣ Add Airflow Connections
 PostgreSQL Connection
 Go to Airflow UI (localhost:8080)
@@ -38,6 +40,7 @@ Add a new HTTP connection:
 Connection ID: open_meteo_api
 Connection Type: HTTP
 Host: https://api.open-meteo.com
+
 5️⃣ Trigger DAG in Airflow
 Open Airflow UI (localhost:8080)
 Search for "weather_etl_pipeline"
