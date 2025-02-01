@@ -1,6 +1,8 @@
 # Weather-ETL-Pipeline-using-Apache-Airflow
 How to Set Up & Run
+
 1️⃣ Clone the Repository
+
 sh
 Copy
 Edit
