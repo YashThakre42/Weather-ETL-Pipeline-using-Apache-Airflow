@@ -9,7 +9,6 @@ PostgresHook: To connect and interact with PostgreSQL.
 requests: To make HTTP requests.
 
 json: To parse JSON responses.
-
 datetime: To manage timestamps.
 
  Step 2: Define Global Variables
