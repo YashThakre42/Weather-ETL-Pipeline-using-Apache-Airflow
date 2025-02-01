@@ -22,6 +22,7 @@ schedule_interval='@daily': Runs once per day.
 catchup=False: Ensures only the latest run is executed (prevents old unprocessed data from being executed in bulk).
 
 ETL Pipeline Breakdown
+
 1️⃣ Extract Data from Open-Meteo API
 Extract Phase Explanation
 HttpHook is used to connect to Open-Meteo API.
