@@ -1,3 +1,5 @@
+This project is an ETL (Extract, Transform, Load) data pipeline built using Apache Airflow. It fetches real-time weather data from the Open-Meteo API, transforms it, and loads it into a PostgreSQL database for further analysis.
+
 Astronomer manages the entire Airflow so I installed Astro, Docker desktop and visual studio code.
 
 ETL Pipeline Breakdown
