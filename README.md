@@ -48,3 +48,15 @@ dag_id: Unique identifier for the DAG.
 schedule_interval='@daily': Runs once per day.  
 catchup=False: Ensures only the latest run is executed (prevents old unprocessed data from being executed in bulk).
 
+Step 5: Deployment
+===============
+Starting Airflow by running 'astro dev start'    
+Postgres: Airflow's Metadata Database  
+Webserver: The Airflow component responsible for rendering the Airflow UI  
+Scheduler: The Airflow component responsible for monitoring and triggering tasks  
+Triggerer: The Airflow component responsible for triggering deferred tasks  
+
+Step 6: Testing
+===============
+Running the Dags in the Airflow-UI  
+Loading the data in Postgres(DBeaver)  
