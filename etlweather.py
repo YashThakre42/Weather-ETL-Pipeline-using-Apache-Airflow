@@ -7,7 +7,7 @@ import requests
 import json
 from datetime import datetime
 
-# Latitude and longitude for the desired location (London in this case)
+# Latitude and longitude for (London in this case)
 LATITUDE = '51.5074'
 LONGITUDE = '-0.1278'
 POSTGRES_CONN_ID = 'postgres_default'
@@ -22,7 +22,7 @@ default_args = {
 with DAG(dag_id='weather_etl_pipeline',
          default_args=default_args,
          schedule_interval='@daily',
-         catchup=False) as dag:  # ✅ Fixed variable name
+         catchup=False) as dag: 
     
     @task()
     def extract_weather_data():
@@ -32,8 +32,8 @@ with DAG(dag_id='weather_etl_pipeline',
 
         # Build API URL
         endpoint = f'/v1/forecast?latitude={LATITUDE}&longitude={LONGITUDE}&current_weather=true'
-        base_url = http_hook.base_url  # ✅ Fix: Get full URL
-        response = requests.get(f"{base_url}{endpoint}")  # ✅ Fix: Use full URL
+        base_url = http_hook.base_url
+        response = requests.get(f"{base_url}{endpoint}")  
         
         if response.status_code == 200:
             return response.json()
@@ -90,7 +90,7 @@ with DAG(dag_id='weather_etl_pipeline',
         conn.commit()
         cursor.close()
 
-        return f"Data successfully inserted into PostgreSQL at {datetime.now()}"  # ✅ Fix: Return success message
+        return f"Data successfully inserted into PostgreSQL at {datetime.now()}"  
 
     ## DAG Workflow - ETL Pipeline
     weather_data = extract_weather_data()
