@@ -10,30 +10,26 @@ Response is checked: ✅ If status code = 200, return JSON response.
 
 2️⃣ Transform Data
 ===============
-Extracts useful weather parameters from the API response.
-Converts raw JSON into a structured Python dictionary for easy database insertion.
-❌ Else, raise an error
+Extracts useful weather parameters from the API response.  
+Converts raw JSON into a structured Python dictionary for easy database insertion.  
+❌ Else, raise an error  
 
 3️⃣ Load Data into PostgreSQL
 ===============
-Uses PostgresHook to connect to the PostgreSQL database.
-Creates a table (weather_data) if it doesn’t exist.
-Inserts transformed data into the table.
-Commits the transaction to save changes.
+Uses PostgresHook to connect to the PostgreSQL database.  
+Creates a table (weather_data) if it doesn’t exist.  
+Inserts transformed data into the table.  
+Commits the transaction to save changes.  
 
 
 Step 1: Import Necessary Libraries
 ===============
-Apache Airflow: For task orchestration,
-HttpHook: To fetch data from the Open-Meteo API,
-
-PostgresHook: To connect and interact with PostgreSQL,
-
-requests: To make HTTP requests,
-
-json: To parse JSON responses,
-
-datetime: To manage timestamps.
+Apache Airflow: For task orchestration,  
+HttpHook: To fetch data from the Open-Meteo API,  
+PostgresHook: To connect and interact with PostgreSQL,  
+requests: To make HTTP requests,  
+json: To parse JSON responses,  
+datetime: To manage timestamps.  
 
  Step 2: Define Global Variables
  ===============
