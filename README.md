@@ -4,7 +4,6 @@ ETL Pipeline Breakdown
 
 1️⃣ Extract Data from Open-Meteo API
 ===============
-Extract Phase Explanation
 HttpHook is used to connect to Open-Meteo API.
 API Request is built using latitude & longitude.
 Response is checked:
@@ -12,14 +11,12 @@ Response is checked:
 
 2️⃣ Transform Data
 ===============
-Transform Phase Explanation
 Extracts useful weather parameters from the API response.
 Converts raw JSON into a structured Python dictionary for easy database insertion.
 ❌ Else, raise an error
 
 3️⃣ Load Data into PostgreSQL
 ===============
-Load Phase Explanation
 Uses PostgresHook to connect to the PostgreSQL database.
 Creates a table (weather_data) if it doesn’t exist.
 Inserts transformed data into the table.
