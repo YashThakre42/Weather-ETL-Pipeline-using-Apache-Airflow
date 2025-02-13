@@ -14,21 +14,25 @@ json: To parse JSON responses,
 datetime: To manage timestamps.
 
  Step 2: Define Global Variables
+ 
 Latitude & Longitude: Used to fetch weather data for a specific location (London in this case).
-
-Airflow Connection IDs:
 
 postgres_default: Used to connect to PostgreSQL.
 
 open_meteo_api: Used to connect to Open-Meteo API.
 
 Step 3: Define Default Arguments for Airflow DAG
+
 owner: Specifies the DAG owner.
+
 start_date: Defines when the DAG should start running.
 
 Step 4: Define the DAG
+
 dag_id: Unique identifier for the DAG.
+
 schedule_interval='@daily': Runs once per day.
+
 catchup=False: Ensures only the latest run is executed (prevents old unprocessed data from being executed in bulk).
 
 ETL Pipeline Breakdown
