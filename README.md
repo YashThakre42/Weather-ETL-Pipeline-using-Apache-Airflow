@@ -1,3 +1,5 @@
+Astronomer manages the entire Airflow so I installed Astro, Docker desktop and visual studio code.
+
 Step 1: Import Necessary Libraries
 Apache Airflow: For task orchestration.
 HttpHook: To fetch data from the Open-Meteo API.
