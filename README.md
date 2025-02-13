@@ -46,6 +46,5 @@ Step 4: Define the DAG
 ===============
 dag_id: Unique identifier for the DAG.  
 schedule_interval='@daily': Runs once per day.  
-
 catchup=False: Ensures only the latest run is executed (prevents old unprocessed data from being executed in bulk).
 
